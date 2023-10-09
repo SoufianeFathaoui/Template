@@ -12,15 +12,17 @@ jobs:
       - name : checking Repository 
         uses: actions/checkout@v2
       - name : configure AWS
-        uses : aws-actions/configure-aws-credentials@v4
+        uses : aws-actions/configure-aws-credentials@v1
         with : 
           aws-access-key-id : ${{ AKIA3XAXRWJ74M27V7XS }}
           aws-secret-access-key : ${{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 }}
           aws-region: us-east-2
       - name :  Deploy cloudformation stack 
-        run : aws cloudformation create-stack --stack-name stack_sfn \ 
-            --template-body file://Template.yaml \
-            --region us-east-1
+        uses : aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: vvvv
+          template: Template.yaml
+       
 
       
     
