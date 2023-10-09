@@ -12,7 +12,7 @@ jobs:
       - name : checking Repository 
         uses: actions/checkout@v2
       - name : configure AWS
-        uses : aws-actions/configure-aws-credentials@v2
+        uses : aws-actions/configure-aws-credentials@v4
         with : 
           aws-access-key-id : ${{ AKIA3XAXRWJ74M27V7XS }}
           aws-secret-access-key : ${{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 }}
