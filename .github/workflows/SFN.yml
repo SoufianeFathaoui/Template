@@ -18,10 +18,12 @@ jobs:
           aws-secret-access-key : ${{3Dzoz6Vuuy+nWTv5GphdrV/GcfQlW+vPdfNeCG/m }}
           aws-region: us-east-2
       - name :  Deploy cloudformation stack 
-        uses : aws-actions/aws-cloudformation-github-deploy@v1
-        with:
-          name: vvvv
-          template: Template.yaml
+        run: |
+          aws cloudformation create-stack --stack-name sfn-stack \
+          --template-body file://Template.yaml \
+          --region us-east-1 
+
+
        
 
       
