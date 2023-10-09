@@ -35,7 +35,7 @@ jobs:
        - name: Deploy CloudFormation Stack
          run: |
           aws cloudformation create-stack --stack-name SoufianeStack \
-          --template-body file://template.yaml \
+          --template-body file://Template.yaml \
           --region us-east-1  # Replace with your desired AWS region
 
        - name: Wait for Stack to Complete
