@@ -21,12 +21,12 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '16'
       - name: Configure AWS credentials 
-        uses: aws-actions/configure-aws-credentials@0e613a0980cbf65ed5b322eb7a1e075d28913a83
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-           aws-access-key-id : ${{secrets.AWS_ACCESS_KEY_ID}}
-           aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY }}
+           aws-access-key-id : ${{AKIAQRYS3OZNJY3EJ5YR}}
+           aws-secret-access-key: ${{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 }}
            aws-region: us-east-2
 
 
