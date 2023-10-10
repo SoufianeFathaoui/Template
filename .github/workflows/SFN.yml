@@ -26,10 +26,7 @@ jobs:
           --template-body file://template.yaml \
           --region us-east-1  # Replace with your desired AWS region
 
-      - name: Wait for Stack to Complete
-        run: |
-          aws cloudformation wait stack-create-complete --stack-name stackSfn \
-          --region us-east-1
+  
 
 
 
