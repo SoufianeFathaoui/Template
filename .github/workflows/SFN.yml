@@ -21,12 +21,16 @@ jobs:
           aws-secret-access-key : ${{3Dzoz6Vuuy+nWTv5GphdrV/GcfQlW+vPdfNeCG/m }}
           aws-region: us-east-2
       - name :  Deploy cloudformation stack 
-        uses : aws-actions/aws-cloudformation-github-deploy@v1
-        with :
-          name: tekloon-test-stack
-          template: Template.yaml
-          no-fail-on-empty-changeset: "1"
-          parameter-overrides: "EC2InstanceType=t2.micro" 
+        run: |
+          aws cloudformation create-stack --stack-name stackSfn \
+          --template-body file://template.yaml \
+          --region us-east-1  # Replace with your desired AWS region
+
+      - name: Wait for Stack to Complete
+        run: |
+          aws cloudformation wait stack-create-complete --stack-name stackSfn \
+          --region us-east-1
+
 
 
        
