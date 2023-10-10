@@ -18,6 +18,10 @@ jobs:
     steps:
       - name : checking Repository 
         uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
       - name: Configure AWS credentials 
         uses: aws-actions/configure-aws-credentials@0e613a0980cbf65ed5b322eb7a1e075d28913a83
         with:
