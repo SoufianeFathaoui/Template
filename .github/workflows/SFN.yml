@@ -15,11 +15,11 @@ jobs:
       - name : checking Repository 
         uses: actions/checkout@v2
       - name : configure AWS
-        uses : aws-actions/configure-aws-credentials@v1
-        with : 
-          aws-access-key-id : ${{ AKIA3XAXRWJ74M27V7XS }}
-          aws-secret-access-key : ${{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 }}
-          aws-region: us-east-2
+        run: |
+          echo "[default]
+          aws_access_key_id = ${{ AKIASGQ34QLRLL7JXDDJ }}
+          aws_secret_access_key = ${{ 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 }}" > ~/.aws/credentials
+
       - name :  Deploy cloudformation stack 
         run: |
           aws cloudformation create-stack --stack-name stackSfn \
