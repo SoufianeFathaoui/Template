@@ -16,7 +16,6 @@ jobs:
         uses: actions/checkout@v2
       - name : configure AWS
         run: |
-          echo "[default]
           aws_access_key_id = ${{ AKIATVCL47PDJWYABMGB }}
           aws_secret_access_key = ${{ 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 }}" > ~/.aws/credentials
 
