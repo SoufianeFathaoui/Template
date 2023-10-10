@@ -17,8 +17,8 @@ jobs:
       - name : configure AWS
         run: |
           echo "[default]
-          aws_access_key_id = ${{ AKIASGQ34QLRLL7JXDDJ }}
-          aws_secret_access_key = ${{ 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 }}" > ~/.aws/credentials
+          aws_access_key_id = ${{ AKIATVCL47PDJWYABMGB }}
+          aws_secret_access_key = ${{ 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 }}" > ~/.aws/credentials
 
       - name :  Deploy cloudformation stack 
         run: |
