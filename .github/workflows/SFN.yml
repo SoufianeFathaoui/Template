@@ -33,7 +33,7 @@ jobs:
         with:
           name: soufianeStack
           template: template.yaml
-          parameter-overrides: ${{ secrets.MY_SECRET_VALUE }}
+          capabilities: CAPABILITY_NAMED_IAM
       
       
 
